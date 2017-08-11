@@ -1,0 +1,111 @@
+body {
+  background-color: teal;
+  background-size: cover;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  width: 600px;
+  margin: auto;
+}
+
+.title, .location, .country, .temperature, .weather, .forecast-icon {
+  background-color: ghostwhite;
+  box-shadow: 3px 3px 1px gray;
+  opacity: 0.6;
+  border-radius: 5px;
+  font-family: helvetica;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: auto;
+}
+
+.title, .location, .country, .temperature, .weather {
+  color: darkslategray;
+  font-weight: bold;
+  text-align: center;
+}
+
+.title-wrap, .location-wrap, .country-wrap, .temperature-wrap, .weather-wrap .icon-wrap {
+  overflow: auto;
+}
+
+.title {
+  grid-column: 1 / 4;
+  grid-row: auto;
+}
+
+.location {
+  grid-column: 1 / 3;
+  grid-row: auto;
+}
+
+#location-text, #forecast-text, #country-text {
+  font-size: 150%;
+}
+
+.country {
+  grid-column: 1fr;
+  grid-row: auto;
+}
+
+.temperature {
+  grid-column: 1fr;
+  grid-row: auto;
+}
+
+.temperature:hover {
+  opacity: 0.8;
+  color: darkslategray;
+  cursor: pointer;
+}
+
+.temperature:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px rgba(0, 0, 0, .5);
+}
+
+#temperature-text {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.weather {
+  grid-column: 1fr;
+  grid-row: auto;
+}
+
+.forecast-icon {
+  grid-column: 1fr;
+  grid-row: auto;
+  color: black;
+}
+
+.icon-wrap img {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 625px) {
+  .grid-wrapper {
+    width: 95%;
+  }
+
+  .temperature {
+    grid-column: 1 / 4;
+  }
+
+  .weather {
+    grid-column: 1 / 3;
+  }
+}
+
+#tyler {
+  font-family: helvetica;
+  text-align: center;
+  color: ghostwhite;
+}
